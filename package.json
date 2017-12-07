@@ -1,0 +1,41 @@
+{
+  "name": "fluo-kata-minesweeper",
+  "version": "0.0.0",
+  "description": "",
+  "engineStrict": true,
+  "engines": {
+    "node": ">=8.9"
+  },
+  "devDependencies": {
+    "babel-cli": "~6.26.0",
+    "babel-core": "~6.26.0",
+    "babel-jest": "~21.2.0",
+    "babel-plugin-transform-async-to-generator": "~6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "~6.26.0",
+    "babel-plugin-transform-flow-strip-types": "~6.22.0",
+    "babel-plugin-transform-runtime": "~6.23.0",
+    "babel-preset-stage-3": "~6.24.1",
+    "flow-bin": "~0.58.0",
+    "jest": "~21.2.1"
+  },
+  "scripts": {
+    "clean": "rm -rf coverage dist tmp",
+    "flow": "flow check",
+    "test": "npm run test-only",
+    "test-only": "jest --coverage",
+    "test:watch": "jest --watch",
+    "build": "babel src/**/*.js -d dist",
+    "build:watch": "babel --watch src/**/*.js -d dist"
+  },
+  "author": "",
+  "license": "MIT",
+  "jest": {
+    "testEnvironment": "node",
+    "moduleFileExtensions": ["js"],
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": ["src/**/*.js"]
+  },
+  "dependencies": {
+    "babel-runtime": "~6.26.0"
+  }
+}
