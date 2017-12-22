@@ -22,7 +22,7 @@
   "scripts": {
     "clean": "rm -rf coverage dist tmp",
     "flow": "flow check",
-    "flow-coverage": "flow-coverage-report -i 'src/**/*.js'",
+    "flow-coverage": "flow-coverage-report",
     "test": "npm run test-only",
     "test-coverage": "jest --coverage",
     "test:watch": "jest --watch",
@@ -39,6 +39,16 @@
     "coverageDirectory": "coverage",
     "collectCoverageFrom": [
       "src/**/*.js"
+    ]
+  },
+  "flow-coverage-report": {
+    "includeGlob": [
+      "src/lib/**/*.js"
+    ],
+    "type": [
+      "text",
+      "html",
+      "json"
     ]
   },
   "dependencies": {
